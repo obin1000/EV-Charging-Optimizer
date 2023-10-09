@@ -44,6 +44,7 @@ classdef ChargeStation
                         % the free charger
                         selected_car = obj.CarQueue(1);
                         obj.CarQueue = obj.CarQueue(2:end);
+                        selected_car.AssignedTime = time;
                         obj.Chargers(charger_num) = obj.Chargers(charger_num).assignCar(selected_car);
                     end
                 end

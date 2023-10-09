@@ -3,13 +3,15 @@ classdef Car
       Capacity double % [kWh] Total capacity of the car
       Charge double   % [kWh] Current capacity of the car
       ArrivalTime double
+      AssignedTime double % Time when assigned to a charger
       DepartureTime double
    end
    methods
       function obj = Car(capacity, charge, arrival_time)
          obj.Capacity = capacity;
-         obj.Charge= 0;
+         obj.Charge= charge;
          obj.ArrivalTime = arrival_time;
+         obj.AssignedTime = -1;
          obj.DepartureTime = -1;
       end
       function [obj, power_added] = addCharge(obj, power)

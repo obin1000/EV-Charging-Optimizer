@@ -1,7 +1,7 @@
 % Initialize
 % Input variables
 N_ports = 5; % Number of charging ports
-P_ports = 11; % Power rating of the charging ports [kW]
+P_ports = 50; % Power rating of the charging ports [kW]
 C_bat = 40; % Battery capacity in kWh
 
 minutes_in_day = 24*60;
