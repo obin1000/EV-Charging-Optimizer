@@ -11,11 +11,10 @@ station1 = ChargeStation(N_ports, P_ports);
 
 % Start simulation
 for minute=1:minutes_in_day
-    new_cars = Car.arriveCars(minute, AverageCarsPerMinute, C_bat);
+    new_cars = arrive_cars(minute, AverageCarsPerMinute, C_bat);
     station1 = station1.addCars(new_cars);
     station1 = station1.update(minute);
 end
-
 
 % Results
 totalPower = station1.getTotalPower();
