@@ -2,6 +2,7 @@ classdef Car
    properties
       Capacity double % [kWh] Total capacity of the car
       Charge double   % [kWh] Current capacity of the car
+      Cost double % [Euro] Amount to pay for the electricity 
       ArrivalTime double
       AssignedTime double % Time when assigned to a charger
       DepartureTime double
@@ -11,6 +12,7 @@ classdef Car
          obj.Capacity = capacity;
          obj.Charge= charge;
          obj.ArrivalTime = arrival_time;
+         obj.Cost = 0;
          obj.AssignedTime = -1;
          obj.DepartureTime = -1;
       end
@@ -32,12 +34,12 @@ classdef Car
       end 
    end
    methods(Static)
-      function cars = arriveCars(t, capacity)
+      function cars = arriveCars(t, average, capacity)
         % Returns a list of new arriving cars
         cars = [];
         % Use exponential distribution for arriving cars
         % TODO: Do this based on the time (t)
-        for car=1:round(exprnd(1, 1, 1))
+        for car=1:round(exprnd(average, 1, 1))
             % Calculate a random charge for the car
             car_charge = min(exprnd(0.2)*capacity, capacity);
             cars = [cars, Car(capacity, car_charge, t)];

@@ -14,10 +14,7 @@ classdef ChargeStation
         end
 
         function total_power = getTotalPower(obj)
-            total_power = 0;
-            for charger_num=1:numel(obj.Chargers)
-                total_power = total_power + obj.Chargers(charger_num).TotalPowerCharged;
-            end
+            total_power = sum([obj.Chargers.TotalPowerCharged]);
         end
         
         function total_cars = getCompletedCars(obj)
@@ -27,10 +24,19 @@ classdef ChargeStation
             end
         end
 
-        % TODO: add function for average waiting time
+        function total_wait = getWaitingTime(obj)
+            total_wait = 0;
+            for charger_num=1:numel(obj.Chargers)
+                total_wait = total_wait + obj.Chargers(charger_num).getWaitingTime();
+            end
+        end
+
+        function total_cost = getCost(obj)
+            total_cost = sum([obj.Chargers.TotalCost]);
+        end
 
         function obj = addCars(obj, cars)
-            % Add cars that arrive at the charge station
+            % Add cars to the queue that arrive at the charge station
             obj.CarQueue = [obj.CarQueue, cars];
         end
         
