@@ -39,6 +39,14 @@ classdef ChargeStation
             waiting = numel(obj.CarQueue);
         end
 
+        function occupied = getOccupied(obj)
+            occupied = 0;
+            for charger_num=1:numel(obj.Chargers)
+                if not(obj.Chargers(charger_num).isFree())
+                    occupied = occupied + 1;
+                end
+            end
+        end
         function obj = addCars(obj, cars)
             % Add cars to the queue that arrive at the charge station
             obj.CarQueue = [obj.CarQueue, cars];
