@@ -1,3 +1,4 @@
-function revenue = revenue_function(number_ports, VC_m_per_port, Price_charging_hourly, VC_elec_per_port, D_t)
-    revenue = sum(- number_ports * VC_m_per_port + (Price_charging_hourly - VC_elec_per_port) .* min(D_t, number_ports));
+function revenue = revenue_function(ChargeStation, number_ports, VC_m_per_port)
+    %VCM_per_port is per hour
+    revenue = sum([ChargeStation.Chargers.TotalCost])*1.2 - sum([ChargeStation.Chargers.TotalCost]) - number_ports * VC_m_per_port *24;
 end
