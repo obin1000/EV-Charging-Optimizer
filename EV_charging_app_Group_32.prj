@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="1549380273" file="C:\Users\nilsl\MATLAB Drive\group32\EV_charging_app_Group_32.prj" location="C:\Users\nilsl\MATLAB Drive\group32" name="EV_charging_app_Group_32" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="2011085582" file="C:\Users\nilsl\MATLAB Drive\group32\EV_charging_app_Group_32.prj" location="C:\Users\nilsl\MATLAB Drive\group32" name="EV_charging_app_Group_32" target="target.mlapps" target-name="Package App">
     <param.appname>EV_charging_app_Group_32</param.appname>
     <param.authnamewatermark>Group 32</param.authnamewatermark>
     <param.email />
@@ -12,7 +12,7 @@
     </param.icons>
     <param.summary>Simulate and optimize the work of an EV charging station.</param.summary>
     <param.description>Simulate and optimize the work of an EV charging station.</param.description>
-    <param.screenshot>C:\Users\nilsl\AppData\Local\Temp\tpc779cf71_c1bd_4aba_8e3a_2e233c1b4bee.png</param.screenshot>
+    <param.screenshot>C:\Users\nilsl\AppData\Local\Temp\tp964ed1dd_2673_4d7c_91f7_03fcac97fe64.png</param.screenshot>
     <param.version>1.0</param.version>
     <param.products.name />
     <param.products.id />
@@ -34,13 +34,8 @@
       <file>${PROJECT_ROOT}\app_final.mlapp</file>
     </fileset.main>
     <fileset.depfun>
-      <file>${PROJECT_ROOT}\arrive_cars.m</file>
-      <file>${PROJECT_ROOT}\Car.m</file>
-      <file>${PROJECT_ROOT}\Charger.m</file>
-      <file>${PROJECT_ROOT}\ChargeStation.m</file>
-      <file>${PROJECT_ROOT}\electricity_price.mat</file>
       <file>${PROJECT_ROOT}\EV-charging-stations.jpg</file>
-      <file>${PROJECT_ROOT}\minutes_to_time.m</file>
+      <file>${PROJECT_ROOT}\EV-charging-stations_hole.png</file>
     </fileset.depfun>
     <fileset.resources>
       <file>${PROJECT_ROOT}\Images</file>
