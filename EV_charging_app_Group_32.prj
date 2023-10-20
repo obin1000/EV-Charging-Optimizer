@@ -1,0 +1,80 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="1549380273" file="C:\Users\nilsl\MATLAB Drive\group32\EV_charging_app_Group_32.prj" location="C:\Users\nilsl\MATLAB Drive\group32" name="EV_charging_app_Group_32" target="target.mlapps" target-name="Package App">
+    <param.appname>EV_charging_app_Group_32</param.appname>
+    <param.authnamewatermark>Group 32</param.authnamewatermark>
+    <param.email />
+    <param.company />
+    <param.icon>${PROJECT_ROOT}\EV_charging_app_Group_32_resources\icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\EV_charging_app_Group_32_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\EV_charging_app_Group_32_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\EV_charging_app_Group_32_resources\icon_16.png</file>
+    </param.icons>
+    <param.summary>Simulate and optimize the work of an EV charging station.</param.summary>
+    <param.description>Simulate and optimize the work of an EV charging station.</param.description>
+    <param.screenshot>C:\Users\nilsl\AppData\Local\Temp\tpc779cf71_c1bd_4aba_8e3a_2e233c1b4bee.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>24a98b86-5293-41d8-817e-81655b9e9a9f</param.guid>
+    <unset>
+      <param.email />
+      <param.company />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\app_final.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\arrive_cars.m</file>
+      <file>${PROJECT_ROOT}\Car.m</file>
+      <file>${PROJECT_ROOT}\Charger.m</file>
+      <file>${PROJECT_ROOT}\ChargeStation.m</file>
+      <file>${PROJECT_ROOT}\electricity_price.mat</file>
+      <file>${PROJECT_ROOT}\EV-charging-stations.jpg</file>
+      <file>${PROJECT_ROOT}\minutes_to_time.m</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\Images</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\nilsl\MATLAB Drive" name="group32" optional="false">C:\Users\nilsl\MATLAB Drive\group32</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2023a</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
